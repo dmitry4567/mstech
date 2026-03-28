@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:mstech/core/router/app_router.dart';
 
 @RoutePage()
-class WelcomePage extends StatefulWidget {
+class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
-  @override
-  State<WelcomePage> createState() => _WelcomePageState();
-}
-
-class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,9 +76,7 @@ class _WelcomePageState extends State<WelcomePage> {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    context.replaceRoute(const SubscriptionRoute());
-                  },
+                  onPressed: () => context.replaceRoute(const SubscriptionRoute()),
                   child: const Text('Продолжить'),
                 ),
               ),

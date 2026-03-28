@@ -2,14 +2,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,10 +65,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                child: Column(
+                child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
+                    Text(
                       'Ваша подписка',
                       style: TextStyle(
                         color: Colors.white70,
@@ -81,8 +76,8 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    const Text(
+                    SizedBox(height: 8),
+                    Text(
                       'Активна',
                       style: TextStyle(
                         color: Colors.white,
@@ -90,16 +85,16 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
                     Row(
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.check_circle_rounded,
                           color: Colors.white,
                           size: 18,
                         ),
-                        const SizedBox(width: 8),
-                        const Text(
+                        SizedBox(width: 8),
+                        Text(
                           'Все функции доступны',
                           style: TextStyle(
                             color: Colors.white,
@@ -123,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,
                   childAspectRatio: 1.1,
-                  children: const [
+                  children: [
                     _FeatureCard(
                       icon: Icons.analytics_rounded,
                       title: 'Аналитика',
